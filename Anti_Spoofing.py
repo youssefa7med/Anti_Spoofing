@@ -11,7 +11,7 @@ cap.set(3, 640)
 cap.set(4, 480)
 
 
-model = YOLO(r"D:\data science\note.books\Anti Spoofing\testing\best.pt")
+model = YOLO(r"D:\data science\note.books\Anti Spoofing\Anti_Spoofing\best.pt")
 
 
 classNames = ["fake", "real"]
