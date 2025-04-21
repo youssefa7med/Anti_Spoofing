@@ -1,4 +1,3 @@
-```
 # 🛡️ Anti-Spoofing Face Detection with YOLOv8
 
 ![Anti-Spoofing Demo](https://www.hackread.com/wp-content/uploads/2016/01/bypassing-lastpasss-security-a-phishing-attack-would-serve-just-right.gif)
@@ -130,4 +129,4 @@ Thanks to the open-source community and Ultralytics for the YOLOv8 framework, an
 ---
 
 > Made with 💻 by [Youssef Ahmed](https://github.com/youssefa7med)
-```
+
