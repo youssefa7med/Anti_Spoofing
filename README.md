@@ -1,36 +1,133 @@
+```
 # 🛡️ Anti-Spoofing Face Detection with YOLOv8
 
-This project aims to detect whether a face presented to the camera is **real (live)** or **fake (e.g., printed or on a screen)** using a YOLOv8 model trained on anti-spoofing datasets. It combines `ultralytics` YOLOv8 with `cvzone`'s `FaceDetector` for precise facial region analysis.
+![Anti-Spoofing Demo](https://www.hackread.com/wp-content/uploads/2016/01/bypassing-lastpasss-security-a-phishing-attack-would-serve-just-right.gif)
+
+This project focuses on detecting whether a detected face is **real (live)** or **fake (e.g., photo or video spoof)** using a YOLOv8 model. The application is developed in Python with real-time webcam processing and visual feedback using OpenCV and cvzone.
 
 ---
 
-## 📸 Demo
+## 🔍 Overview
 
-![Anti-Spoofing Demo]([https://media.giphy.com/media/3o7btY60hzzp0hYb5u/giphy.gif](https://www.hackread.com/wp-content/uploads/2016/01/bypassing-lastpasss-security-a-phishing-attack-would-serve-just-right.gif))
-
----
-
-## 🔍 Features
-
-- 🚀 Real-time face anti-spoofing detection.
-- 🎯 High accuracy using a custom-trained YOLOv8 model.
-- 🧠 Detects whether the detected face is **real** or **fake**.
-- 📦 Easy to integrate and extend.
+The Anti-Spoofing system uses deep learning techniques to enhance security in facial recognition systems. It helps prevent unauthorized access through printed photos, mobile screen images, or deepfake videos by identifying spoofed inputs in real-time.
 
 ---
 
-## 🧠 Model
+## 💡 Key Features
 
-- Framework: **YOLOv8** from [Ultralytics](https://github.com/ultralytics/ultralytics)
+- **Real-Time Detection**  
+  Fast and responsive webcam-based detection with YOLOv8.
+
+- **Classification**  
+  Differentiates between `REAL` and `FAKE` faces using a custom-trained model.
+
+- **Visual Feedback**  
+  Uses colored bounding boxes and labels for easy identification:
+  - 🟢 Green box for REAL
+  - 🔴 Red box for FAKE
+
+- **FPS Monitoring**  
+  Displays frames-per-second for performance tracking.
+
+---
+
+## 🧠 Model Details
+
+- Framework: **Ultralytics YOLOv8**
 - Classes: `["fake", "real"]`
-- Trained on a custom anti-spoofing dataset (e.g., CASIA, CelebA-Spoof, etc.).
+- Format: `.pt` (PyTorch trained weights)
 
 ---
 
-## 🛠️ Installation
+## 🛠️ Technologies Used
 
-1. Clone the repository:
+- **Python**: Core language
+- **OpenCV**: For video and image processing
+- **cvzone**: For visual overlays and enhancements
+- **Ultralytics**: For YOLOv8 object detection
+- **Torch**: Deep learning framework
+
+---
+
+## 🖥️ Live Demo (Offline)
+
+Run the app locally to experience real-time anti-spoofing.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure Python 3.8+ is installed. Install the following dependencies:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/anti-spoofing-yolo.git
-cd anti-spoofing-yolo
+pip install -r requirements.txt
+```
+
+### Installation Steps
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/youssefa7med/anti-spoofing-yolo.git
+   cd anti-spoofing-yolo
+   ```
+
+2. **Add Your YOLOv8 Model**  
+   Place your `best.pt` file in the project directory.
+
+3. **Run the Script**:
+   ```bash
+   python detect.py
+   ```
+
+---
+
+## 📂 Project Structure
+
+```
+.
+├── best.pt               # Trained YOLOv8 model
+├── detect.py             # Main real-time detection script
+├── README.md             # Project documentation
+├── requirements.txt      # Required libraries
+```
+
+---
+
+## 📸 Output Example
+
+- 🟢 `REAL 98%`: Detected face is a real person.
+- 🔴 `FAKE 95%`: Detected spoofed face (photo, screen, etc.).
+
+---
+
+## 📈 Future Enhancements
+
+- 🔐 Integration with authentication systems
+- 📱 Mobile or Jetson Nano deployment
+- 🔊 Audio alerts on detection
+- 📊 Logging detected faces and timestamps
+
+---
+
+## 🧑‍💻 Contributing
+
+Contributions are welcome! Fork the repo, make your changes, and submit a pull request.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙌 Acknowledgments
+
+Thanks to the open-source community and Ultralytics for the YOLOv8 framework, and the contributors behind datasets used in training.
+
+---
+
+> Made with 💻 by [Youssef Ahmed](https://github.com/youssefa7med)
+```
